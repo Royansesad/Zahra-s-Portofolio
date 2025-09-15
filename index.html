@@ -162,45 +162,7 @@
   </div>
 
   <script>
-    // animasi mengetik dari 0 sampai selesai
-    const textElement = document.querySelector('.mengetik');
-    const textToType = textElement.textContent;
-    textElement.textContent = '';
-    let index = 0;
-    let isDeleting = false;
-    const typingSpeed = 50; // kecepatan mengetik
-    const deletingSpeed = 1000; // kecepatan menghapus
-    const delayBetweenCycles = 0; // jeda antar siklus 
-    function type() {
-      if (!isDeleting && index <= textToType.length) {
-        textElement.textContent = textToType.substring(0, index);
-        index++;
-        setTimeout(type, typingSpeed);
-      } else if (isDeleting && index >= 0) {
-        textElement.textContent = textToType.substring(0, index);
-        index--;
-        setTimeout(type, deletingSpeed);
-      } else if (index === textToType.length) {
-        isDeleting = true;
-        setTimeout(type, delayBetweenCycles);
-      } else if (index < 0) {
-        isDeleting = false;
-        index = 0;
-        setTimeout(type, typingSpeed);
-      }
-    }
-    type();
-    // kursor mengetik
-    const cursor = document.createElement('span');
-    cursor.classList.add('cursor');
-    cursor.textContent = '|';
-    textElement.parentNode.insertBefore(cursor, textElement.nextSibling);
-    setInterval(() => {
-      cursor.style.opacity = (cursor.style.opacity === '0' ? '1' : '0');
-      cursor.style.color = (cursor.style.color === '#000' ? '#ff6347' : '#000');
-    }, 500);
-
-    // simple year injection, non-essential
+    // update tahun di footer 
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // cek apakah form di isi
@@ -212,6 +174,7 @@
       if (!name || !email || !message) {
         alert('Please fill in all fields before submitting the form.');
       } else {
+       // tombol kirim pesan 
         window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
       }
     });
