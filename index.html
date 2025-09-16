@@ -163,6 +163,15 @@
   <script>
     // update tahun di footer 
     document.getElementById('year').textContent = new Date().getFullYear();
+       // cek apakah form di isi
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.elements['name'].value.trim();
+      const email = this.elements['email'].value.trim();
+      const message = this.elements['message'].value.trim();
+      if (!name || !email || !message) {
+        alert('Please fill in all fields before submitting the form.');
+      } else {
        // tombol kirim pesan 
         window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
       }
