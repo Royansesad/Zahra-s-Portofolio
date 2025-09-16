@@ -154,29 +154,11 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Zahra's Personal Profile Kelompok 4. Made By Farel, Royan, Wildan, Zahra, and Yoga — Made with ♥</p>
+        <p>© 2025<span id="year"></span> Zahra's Personal Profile Kelompok 4. Made By Farel, Royan, Wildan, Zahra, and Yoga — Made with ♥</p>
       </div>
     </footer>
 
   </div>
 
-  <script>
-    // update tahun di footer 
-    document.getElementById('year').textContent = new Date().getFullYear();
-       // cek apakah form di isi
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = this.elements['name'].value.trim();
-      const email = this.elements['email'].value.trim();
-      const message = this.elements['message'].value.trim();
-      if (!name || !email || !message) {
-        alert('Please fill in all fields before submitting the form.');
-      } else {
-       // tombol kirim pesan 
-        window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
-      }
-    });
-
-  </script>
 </body>
 </html>
