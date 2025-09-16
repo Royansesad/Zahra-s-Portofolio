@@ -401,33 +401,7 @@ h1, h2, h3, h4, h5, h6{
     font-size: 0.9rem;
 }
 
-/* Animations ga tau buat apa, manut auto correct ajh*/
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-
-.hero-inner, .about-inner, .skills-grid, .contact-form, .contact-info {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-}
 /* Responsive Design */
 
 @media (max-width: 768px) {
